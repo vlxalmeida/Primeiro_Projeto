@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #e2e2e7;
+}
+
+.header a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.header .title-group {
+    padding-left: 25px;
+    font-size: 20px;
+  
+}
+
+.header .title-group i {
+    padding-right: 5px;
+}
