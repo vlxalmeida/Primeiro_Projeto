@@ -1,0 +1,54 @@
+<div class="container mt-5">
+<!-- 'show errormsg' -->
+    <div *ngIf="errormsg" class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{errormsg}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
+    <form [formGroup]="cadastroForm" (ngSubmit)="cadastroSubmit()">
+
+        <div class="col-lg-4 mt-2">
+            <input type="text" class="form-control" formControlName="nro_ficha" placeholder="nro ficha">
+        </div>
+
+        <div class="col-lg-4 mt-2">
+            <input type="text" class="form-control"  formControlName="nro_cas" placeholder="nro cas">
+        </div>
+
+        <div class="col-lg-4 mt-2">
+            <input type="text" class="form-control" formControlName="nro_onu" placeholder="nro onu">
+        </div>
+
+        <div class="col-lg-4 mt-2">
+            <input type="text" class="form-control" formControlName="produto" placeholder="produto">
+        </div>
+
+        <div class="col-lg-4 mt-2">
+            <input type="text" class="form-control" formControlName="cliente" placeholder="cliente">
+        </div>
+
+        <div class="col-lg-4 mt-2">
+            <input type="text" class="form-control" formControlName="unidade" placeholder="unidade">
+        </div>
+
+        <div class="col-lg-4 mt-2">
+            <input type="date" class="form-control" formControlName="data_publicacao" placeholder="data da publicação">
+        </div>
+
+        <div class="col-lg-4 mt-2">
+            <input type="text" class="form-control" formControlName="nro_revisao" placeholder="nro da revisão">
+        </div>
+
+        <div class="col-lg-4 mt-2">
+            <input type="text" class="form-control" formControlName="arquivo_pdf" placeholder="arquivo PDF">
+        </div>
+
+
+        <div class="col-lg-4 mt-2">
+            <button class="btn btn-primary btn-sm">Create</button>
+        </div>
+
+
+    </form>
+
+</div>

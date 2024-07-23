@@ -9,22 +9,35 @@ import { HomeComponent } from './views/home/home.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiserviceService } from './apiservice.service';
+import { CreateComponent } from './create/create.component';
+import { ReadComponent } from './read/read.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    CreateComponent,
+    ReadComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
+   
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    ApiserviceService,
   ],
   bootstrap: [AppComponent]
 })
