@@ -1,1 +1,44 @@
-<p>home works!</p>
+<div class="container mt-5">
+
+  <table class="table table-bordered" >
+    
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nro Ficha</th>
+      <th scope="col">Nro CAS</th>
+      <th scope="col">Nro ONU</th>
+      <th scope="col">Produto</th>
+      <th scope="col">Cliente</th>
+      <th scope="col">Unidade</th>
+      <th scope="col">Data da publicação</th>
+      <th scope="col">Nro da revisão</th>
+      <th scope="col">Arquivo PDF</th>
+    </tr>
+  </thead>
+  
+    <tbody>
+      <tr *ngFor='let us of readData'>
+        <th scope="row">{{us.id_cadastro}}</th>
+
+        <td>{{us.nro_ficha}}</td>
+        <td>{{us.nro_cas}}</td>
+        <td>{{us.nro_onu}}</td>
+        <td>{{us.produto}}</td>
+        <td>{{us.cliente}}</td>
+        <td>{{us.unidade}}</td>
+        <td>{{us.data_publicacao}}</td>
+        <td>{{us.nro_revisao}}</td>
+        <td>
+          {{us.arquivo_pdf}}
+        </td>
+        
+      </tr>
+    </tbody>
+
+
+  </table>
+
+</div>
+
+<!-- <button (click)="geraPDF()">Gera PDF</button> -->
